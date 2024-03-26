@@ -1,0 +1,10 @@
+@use 'variaveis';
+
+.footer{
+    background-color: variaveis.$bgColor;
+
+    &__content{
+        padding: 2em;
+        text-align: center;
+    }
+}

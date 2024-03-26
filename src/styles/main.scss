@@ -1,3 +1,97 @@
-*{
-    background-color: red;
+@use 'variaveis';
+@use 'hero';
+@use 'sinopse';
+@use 'trailer';
+@use 'footer';
+@use 'header';
+
+@font-face{
+    font-family: Mulish;
+    src: url(../../assets/fonts/Mulish-VariableFont_wght.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Mulish;
+    src: url(../../assets/fonts/Mulish-VariableFont_wght.ttf);
+    font-weight: 700;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    color: variaveis.$textColor;
+    font-family: Mulish;
+}
+
+@mixin title($fontSize: 24px) {
+    font-size: $fontSize;
+    color: variaveis.$titleColor;
+    font-family: Mulish;
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title--small {
+    @include title(18px);
+
+}
+
+.title--big {
+    @include title(28px);
+    @media (max-width: 768px){
+        @include title(20px)
+    }
+    
+}
+
+.title--large {
+    @include title(42px);
+    @media (max-width: 768px){
+        @include title(28px);
+    }
+}
+
+.text {
+    @include text();
+}
+
+.text--small{
+    @include text(12px);
+}
+
+.text--big {
+    @include text(20px);
+    @media (max-width: 768px){
+        @include text(14px);
+    }
+}
+
+.text--large {
+    @include text(32px);
+    @media (max-width: 768px){
+        @include text(18px)
+    }
+}
+
+.button{
+    border-radius: 5px;
+    background-color: #ce0000cc;
+    border: 1px solid #ffffff;
+    padding: 1em 0;
+    
+    &:hover{
+        background-color: #a80404cc;
+        transition: .3s ease;
+    }
+    a{
+        text-decoration: none;
+        color: variaveis.$titleColor;
+        font-family: Mulish;
+        padding: 1em;
+    }
 }

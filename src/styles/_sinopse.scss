@@ -1,0 +1,41 @@
+.sinopse{
+    min-height: 100vh;
+    background-image: url(../images/creed2.png);
+    background-size: cover;
+    padding: 5.6vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    @media (max-width: 768px){
+        background-image: url(../images/creed2_phone.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: black;
+        min-height: 60vh;        
+    }
+
+    &__content{
+        text-align: left;
+        max-width: 800px;
+
+        @media (max-width:768px) {
+            padding-top: 15em;
+            text-align: center;
+        }
+
+        h1{
+            margin-bottom: 1em;
+
+            hr{
+                margin: 20px 0;
+                max-width: 220px;
+
+                @media (max-width: 768px) {
+                    margin: 20px auto;
+                }
+            }
+        }
+    }
+}
+

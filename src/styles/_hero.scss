@@ -1,0 +1,43 @@
+.hero{
+    min-height: 100vh;
+    background-image: url(../images/creed1.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    @media (max-width: 768px){
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 0;
+            background-image: url(../images/creed1_phone.png);
+            background-color: black;
+    }
+
+    &__content {
+        max-width: 800px;
+        text-align: center;
+        padding:5.6vw;
+
+        @media (max-width: 768px){
+            max-width: 500px;
+            margin-top: 8em;
+            
+        }
+
+        img{
+            width: 140px;
+            margin-bottom: 2vw;
+
+            @media (max-width: 768px){
+                width: 60px;
+            }
+
+        }
+
+        &__branding{
+            margin-bottom: 2em;
+            font-size: 40px;
+        }
+    }
+}

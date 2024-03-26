@@ -1,0 +1,59 @@
+@use 'variaveis';
+
+.header{
+    position: sticky;
+    left: 0;
+    top: 0;
+
+    &__container{
+        padding: 8px 5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    &__logo{
+        display: flex;
+        padding: .1em 0;
+
+        img{
+            width: 80px;
+        }
+    }
+
+    &__links{
+        display: flex;
+        list-style: none;
+
+        &--is-hidden{
+
+            .header__links__item:first-child {
+                opacity: 0;
+                visibility: hidden;
+                
+            }
+        }
+
+        &__item{
+            padding-left: 40px;
+            transition: .3s ease-in;
+            
+            a{
+                text-decoration: none;
+                color: variaveis.$textColor;
+                font-family: Mulish;
+
+                &:hover{
+                    color: variaveis.$titleColor;
+                    transition: .2s ease;
+                }
+            }
+        }
+    }
+}
+
+
+.hidden{
+    visibility: hidden;
+}
